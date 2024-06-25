@@ -1,0 +1,311 @@
+---
+title: "Zarathu Quarto Template"
+title-slide-attributes:
+  data-background-color: "#051F20"
+  data-footer: ""
+subtitle: "A template for Quarto presentations"
+author: 
+  - name: "name"
+    orcid: 0000-0000-0000-0000
+    email: "id@domain.com"
+    affiliations:
+      - name: Zarathu Co.,Ltd.
+        url: https://zarathu.com/
+version: 1.0.0
+format: 
+  revealjs:
+    logo: img/logo.png
+    include-in-header: img/favicon.html
+    include-after-body: title_footer.html
+    footer: Copyright 2024 (c) Zarathu Co.,Ltd.
+    css: css/style.css
+    smaller: true
+    progress: true
+    controls: true
+    slide-number: true
+  qt-html: default
+date: last-modified
+---
+
+## Introduction
+
+Brief description about content
+
+<!-- bsicon library -->
+```{r}
+#| eval: true
+#| echo: false
+library(bsicons)
+```
+
+
+## Index
+
+::: columns
+::: {.column width="50%"}
+:::
+
+::: {.column width="25%"}
+[01. \
+What is Lorem Ipsum?]{.lt}
+
+[02. \
+Why do we use it?]{.lb}
+:::
+
+::: {.column width="25%"}
+[03. \
+Where does it come from?]{.lt}
+
+[04. \
+Where can I get some?]{.lb}
+:::
+:::
+
+<!-- Section Divider 1-->
+
+##  {background-image="img/001.png"}
+
+[01]{.number}
+
+[Hello World]{.section}
+
+::: parts
+-   QWER
+-   ASDF
+-   ZXCV
+:::
+
+::: {.footer style="display:none"}
+<!-- EMPTY FOOTER -->
+:::
+
+<!-- Section Divider 2-->
+
+<!-- ##  {background-image="img/002.png"} -->
+
+<!-- [02]{.number} -->
+
+<!-- [Hello]{.section2} [World]{ses.white} -->
+
+<!-- ::: parts2 -->
+<!-- -   QWER -->
+<!-- -   ASDF -->
+<!-- -   ZXCV -->
+<!-- ::: -->
+
+<!-- ::: {.footer style="display:none"} -->
+<!-- EMPTY FOOTER -->
+<!-- ::: -->
+
+## Slide with column
+
+::: columns
+::: {.column width="50%"}
+Left Column
+:::
+
+::: {.column width="50%"}
+Right Column
+:::
+:::
+
+## Slide with image
+
+::: columns
+::: {.column width="50%"}
+![](img/R_logo.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+![](img/Python_logo.png){fig-align="center" width="100%"}
+:::
+:::
+
+## Slide with code
+
+<!-- code only-->
+
+```{r}
+#| eval: false
+#| echo: true
+
+print(1+1)
+```
+
+<!-- result only-->
+
+```{r}
+#| eval: true
+#| echo: false
+print(2+3)
+```
+
+## Custom styling
+
+```         
+This text will show as [Green]{.light_green} color
+```
+
+This text will show as [Green]{.light_green} color
+
+::: aside
+Edit the `css/style.css` file to customize the style of your presentation.
+:::
+
+## Callouts
+
+::: {.callout-important appearance="default"}
+Important. Default
+:::
+
+::: {.callout-caution appearance="default"}
+Caution. Default
+:::
+
+::: {.callout-warning appearance="default"}
+Warning. Default
+:::
+
+::: {.callout-tip appearance="minimal"}
+Tip. Minimal
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+Note. Simple without icon
+:::
+
+## Slide with mermaid chart
+
+```{mermaid}
+graph LR;
+  
+  A --> B
+  
+  subgraph G
+    C --> D
+  end
+  
+  style A fill:#FFF;
+  style B fill:#8AC0AE,color:#FFF,stroke:none;
+  
+  style D fill:#2C3A8B,color:#FFF,stroke:none;
+  style G fill:#FFF,color:#000,stroke:#D55140;
+```
+
+## Slide with tabset
+
+::: panel-tabset
+#### question
+
+```{r}
+#| eval: true
+#| echo: false
+library(ggplot2)
+iris |> 
+  ggplot(aes(x = Sepal.Length, y = Petal.Length)) + 
+  geom_point()
+```
+
+#### answer
+
+```{r}
+#| eval: false
+#| echo: true
+
+library(ggplot2)
+iris |> 
+  ggplot(aes(x = Sepal.Length, y = Petal.Length)) + 
+  geom_point()
+```
+:::
+
+## Another languages
+
+::: panel-tabset
+#### yaml
+
+``` yaml
+---
+title: "archives"
+listing:
+  contents: talks
+  sort: "date desc"
+  type: grid
+  image-height: 300px
+format: html
+include-in-header: talks/slider.html
+---
+```
+
+#### html
+
+``` html
+<script src="jquery-3.3.1.min.js"></script>
+<script src="slick.min.js"></script>
+<link rel="stylesheet" href="slick.css" />
+<link rel="stylesheet" href="slick-theme.css" />
+
+<script>
+  $(document).ready(function() {
+    $('.slider').slick({speed: 500, ...});
+  });
+</script>
+
+<style>
+  .slider {
+    width: 1000px;
+    margin: 0px auto;
+  }
+</style>
+```
+
+#### python
+
+``` python
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.random.randn(10, 5))
+df
+```
+:::
+
+<!-- Break slide -->
+
+##  {.center background-color="#051F20" border="solid 1px white"}
+
+::: r-fit-text
+[Break slide]{.break}
+:::
+
+::: {.footer style="display:none"}
+<!-- EMPTY FOOTER -->
+:::
+
+## Stretch
+
+Here is an image:
+
+![](img/R_logo.png){.r-stretch}
+
+Some text after the image.
+
+## icons with bsicon
+
+
+`r bs_icon("github")` github
+
+See this [link](https://icons.getbootstrap.com/)
+
+<!-- Final slide -->
+
+#  {background-color="#051F20"}
+
+[Thank You]{.final}
+
+[`r bs_icon('envelope')` ID\@DOMAIN.COM]{.right}
+
+::: {.footer style="display:none"}
+<!-- EMPTY FOOTER -->
+:::

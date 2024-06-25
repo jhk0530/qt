@@ -1,0 +1,127 @@
+.light_green{
+  color: #63893E;
+}
+
+.dark_green {
+  background: #2A3E21;
+}
+
+.deep_green {
+  background: #051F20;
+}
+
+.white{
+  color: #FFF;
+}
+
+/* font */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal li {
+  font-family: 'Raleway';
+} 
+
+/* logo */
+.reveal .slide-logo{
+  z-index:999 !important;
+}
+
+/* final slide */
+.final {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  font-size: 3em;
+  display: block;
+}
+
+/* break slide */
+.break{
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* footer */
+.reveal .footer{
+  background: rgb(0,0,0);
+  background: linear-gradient(
+    90deg, 
+    rgba(0,0,0,1) 0%, 
+    rgba(5,31,32,1) 25%, 
+    rgba(42,62,33,1) 50%,
+    rgba(99,137,62,0.8) 75%, 
+    rgba(255,255,255,1) 100%);
+  color: #FFF;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-size: 1em;
+  z-index: -1;
+}
+
+.right{
+  text-align: right;
+  margin-top: 5em;
+  display: block;
+}
+
+/* Section Divider*/
+.number{
+  font-size: 4.5em;
+  position: absolute;
+  left: 39%;
+  top: 44%;
+  color: white;
+}
+
+.section{
+  position: absolute;
+  bottom: 20%;
+  left: 30%;
+  font-size: 4em;
+  color: white;
+}
+
+.parts{
+  position:absolute;
+  bottom: 0%;
+  right: 10%;
+  font-size: 0.8em;
+  color: white;
+}
+
+.section2 {
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  font-size: 4em;
+  color: black;
+}
+
+.parts2{
+  position:absolute;
+  bottom: 0%;
+  left: 6%;
+  font-size: 0.8em;
+  color: black;
+}
+
+/* Index */
+
+.lb{
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  padding: 1em;
+  background: #2A3E21;
+  color: white;
+}
+
+.lt{
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  top: 0%;
+  padding: 1em;
+  background: #051F20;
+  color: white;
+}
+
